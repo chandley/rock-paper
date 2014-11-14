@@ -2,9 +2,14 @@ require 'sinatra/base'
 
 class RockPaper < Sinatra::Base
   set :views, Proc.new { File.join(root, "../views") }
+
   get '/' do
     'Please enter your name'
     erb :enter_name
+  end
+
+  post '/play_game' do
+    "Let's play"
   end
 
   # start the server if ruby file executed directly

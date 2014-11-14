@@ -20,7 +20,8 @@ end
 
 When(/^I enter my name$/) do
   visit('/')
-  fill_in 'Enter name', with: 'Chris'
+  fill_in 'your_name', with: 'Chris'
+  click_button 'register'
 end
 
 Then(/^I should go to the play game page$/) do
