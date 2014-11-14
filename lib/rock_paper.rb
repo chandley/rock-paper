@@ -2,7 +2,7 @@ require 'sinatra/base'
 
 class RockPaper < Sinatra::Base
   get '/' do
-    'Hello RockPaper!'
+    'Please enter your name'
   end
 
   # start the server if ruby file executed directly
