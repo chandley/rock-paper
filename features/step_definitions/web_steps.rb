@@ -29,9 +29,11 @@ Then(/^I should go to the play game page$/) do
 end
 
 When(/^I enter nothing$/) do
-  pending # express the regexp above with the code you wish you had
+  visit('/')
+  fill_in 'your_name', with: ''
+  click_button 'register'
 end
 
 Then(/^I should be asked for my name again$/) do
-  pending # express the regexp above with the code you wish you had
+  expect(page).to have_content('enter your name')
 end

@@ -9,6 +9,9 @@ class RockPaper < Sinatra::Base
   end
 
   post '/play_game' do
+    if params[:your_name] == ''
+      redirect '/'
+    end
     "Let's play"
   end
 
