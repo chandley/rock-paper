@@ -1,13 +1,12 @@
+<%require_relative '../lib/game.rb' %>
+
 Let us play
-<!-- 
-<button type="submit">Rock</button>
-<button type="submit">Paper</button>
-<button type="submit">Scissors</button> -->
+
 
 
 <form action="/play" method="POST">
-  <button name="pick" value="Paper">Paper</button>
-  <button name="pick" value="Rock">Rock</button>
-  <button name="pick" value="Scissors">Scissors</button>
+  <% CHOICES.each do |choice| %>
+    <button name="pick" value=><%= choice.to_s %></button>
+  <% end %>
   <input type="hidden" name="name" value=<%=@name%>>
 </form>
