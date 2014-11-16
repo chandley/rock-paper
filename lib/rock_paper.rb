@@ -14,14 +14,13 @@ class RockPaper < Sinatra::Base
     end
     @name = params[:your_name]
     erb :player_make_choice
-
   end
 
   post '/play' do
     @pick = params[:pick]
     @computer_pick = random_choice
     @result = game_outcome(@pick, @computer_pick)
-    erb :result  
+    erb :show_result  
   end
 
   # start the server if ruby file executed directly
