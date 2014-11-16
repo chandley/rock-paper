@@ -18,8 +18,8 @@ class RockPaper < Sinatra::Base
   end
 
   post '/play' do
-    params[:pick]
-    "Game Result"
+    @pick = params[:pick]
+    erb :result 
     
   end
 
