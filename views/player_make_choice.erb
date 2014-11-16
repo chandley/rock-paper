@@ -5,7 +5,7 @@ Let us play
 
 
 <form action="/play" method="POST">
-  <% CHOICES.each do |choice| %>
+  <% choices.each do |choice| %>
     <button name="pick" value=><%= choice.to_s %></button>
   <% end %>
   <input type="hidden" name="name" value=<%=@name%>>

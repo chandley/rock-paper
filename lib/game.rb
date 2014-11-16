@@ -11,7 +11,7 @@ def choices
 end
     
 def random_choice
-  choices.shuffle.first
+  choices.sample
 end
 
 def game_outcome(player_choice, computer_choice)
