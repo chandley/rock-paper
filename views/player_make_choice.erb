@@ -1,5 +1,13 @@
 Let us play
+<!-- 
+<button type="submit">Rock</button>
+<button type="submit">Paper</button>
+<button type="submit">Scissors</button> -->
 
-<button type="button">Rock</button>
-<button type="button">Paper</button>
-<button type="button">Scissors</button>
+
+<form action="/play" method="POST">
+  <button name="pick" value="Paper">Paper</button>
+  <button name="pick" value="Rock">Rock</button>
+  <button name="pick" value="Scissors">Scissors</button>
+  <input type="hidden" name="name" value=<%=@name%>>
+</form>

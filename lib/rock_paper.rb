@@ -16,8 +16,8 @@ class RockPaper < Sinatra::Base
 
   end
 
-  post '/play_game' do
-    'Game Result'
+  post '/play' do
+    "Game Result"
   end
 
   # start the server if ruby file executed directly
