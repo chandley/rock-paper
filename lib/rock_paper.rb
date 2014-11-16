@@ -13,6 +13,11 @@ class RockPaper < Sinatra::Base
       redirect '/'
     end
     erb :player_make_choice
+
+  end
+
+  post '/play_game' do
+    'Game Result'
   end
 
   # start the server if ruby file executed directly

@@ -23,7 +23,7 @@ When(/^I enter my name$/) do
 end
 
 Then(/^I should go to the play game page$/) do
-  expect(page).to have_content("Let's play")
+  expect(page).to have_content('Let us play')
 end
 
 When(/^I enter nothing$/) do
@@ -65,9 +65,9 @@ When(/^I have not made a choice$/) do
 end
 
 When(/^I click on 'rock'$/) do
-  pending # express the regexp above with the code you wish you had
+  click_button 'Rock'
 end
 
-Then(/^the choice of 'rock' is registered$/) do
-  pending # express the regexp above with the code you wish you had
+Then(/^I should see a Game Result page$/) do
+  expect(page).to have_content("Game Result")
 end

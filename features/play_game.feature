@@ -10,4 +10,4 @@ Feature: Playing Rock Paper Scissors
   Scenario: I make a choice 'Rock'
     When I am playing the game
     When I click on 'rock'
-    Then the choice of 'rock' is registered
+    Then I should see a Game Result page
