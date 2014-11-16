@@ -12,7 +12,7 @@ class RockPaper < Sinatra::Base
     if params[:your_name] == ''
       redirect '/'
     end
-    "Let's play"
+    erb :player_make_choice
   end
 
   # start the server if ruby file executed directly

@@ -60,6 +60,10 @@ When(/^I am playing the game$/) do
   step 'I click register'
 end
 
+When(/^I have not made a choice$/) do
+  #nothing to do here
+end
+
 When(/^I click on 'rock'$/) do
   pending # express the regexp above with the code you wish you had
 end

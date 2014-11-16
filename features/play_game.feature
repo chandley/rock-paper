@@ -3,7 +3,8 @@ Feature: Playing Rock Paper Scissors
   I want to play the game
 
   Scenario: Arriving at the play game page
-    When I am playing the game
+    Given I am playing the game
+    When I have not made a choice
     Then I should see a choice of choose Rock, Paper or Scissors
 
   Scenario: I make a choice 'Rock'
