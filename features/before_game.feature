@@ -11,10 +11,14 @@ Feature: Setting up Rock Paper Scissors game
 
   Scenario: I enter my name
     Given I am a new user
+    And I visit the home page
     When I enter my name
+    And click register
     Then I should go to the play game page
 
   Scenario: I enter nothing
     Given I am a new user
+    And I visit the home page
     When I enter nothing
+    And click register
     Then I should be asked for my name again

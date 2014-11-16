@@ -19,9 +19,7 @@ Given(/^I am a new user$/) do
 end
 
 When(/^I enter my name$/) do
-  visit('/')
   fill_in 'your_name', with: 'Chris'
-  click_button 'register'
 end
 
 Then(/^I should go to the play game page$/) do
@@ -36,4 +34,36 @@ end
 
 Then(/^I should be asked for my name again$/) do
   expect(page).to have_content('enter your name')
+end
+
+
+When(/^I click register$/) do
+  click_button 'register'
+end
+
+Given(/^I have entered my name$/) do
+  pending # express the regexp above with the code you wish you had
+end
+
+When(/^I see the play game page$/) do
+  visit('/player_make_choice')
+end
+
+Then(/^I should see a choice of choose Rock, Paper or Scissors$/) do
+  expect(page).to have_content("Rock")
+  # expect(page).to have_selector("img[src$='bunny_head_small.jpg']")
+end
+
+When(/^I am playing the game$/) do
+  step 'I visit the home page'
+  step 'I enter my name'
+  step 'I click register'
+end
+
+When(/^I click on 'rock'$/) do
+  pending # express the regexp above with the code you wish you had
+end
+
+Then(/^the choice of 'rock' is registered$/) do
+  pending # express the regexp above with the code you wish you had
 end
