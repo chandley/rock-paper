@@ -1,27 +1,32 @@
 
-# CHOICES = %i{Rock Paper Scissors}
-WINNERS = {:Rock => :Scissors, :Paper => :Rock, :Scissors => :Paper}
+#beat class which is an odd number of slots after
+CHOICES = [:Scissors, :Paper, :Rock]
+CHOICES = [:Scissors, :Paper, :Rock, :Lizard, :Spock]
 
-def losers 
-  WINNERS.invert
+
+class Player 
+  attr_reader :name
+  
+  def initialize(player_name)
+    @name = player_name
+  end
+
+  def random_choice
+    choice = CHOICES.sample
+  end
+
 end
 
-def choices
-  WINNERS.keys.uniq
-end
-    
-def random_choice
-  choices.sample
-end
 
-def game_outcome(player_choice, computer_choice)
+
+def game_outcome(player1, player2)
   case true
-  when WINNERS[player_choice.to_sym] == computer_choice
-    :player_wins
-  when losers[player_choice.to_sym] == computer_choice
-    :player_loses
+  when player1.choice == player2.choice
+    nil #draw
+  when (CHOICES.index(player1.choice) - CHOICES.index(player2.choice))%2 == 1
+    player1
   else
-    :draw
+    player2
   end
 end
     
