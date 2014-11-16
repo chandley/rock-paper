@@ -12,11 +12,13 @@ class RockPaper < Sinatra::Base
     if params[:your_name] == ''
       redirect '/'
     end
+    @name = params[:your_name]
     erb :player_make_choice
 
   end
 
   post '/play' do
+    params[:pick]
     "Game Result"
     
   end
