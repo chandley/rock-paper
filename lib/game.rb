@@ -16,9 +16,9 @@ end
 
 def game_outcome(player_choice, computer_choice)
   case true
-  when winners[player_choice] == computer_choice
+  when WINNERS[player_choice.to_sym] == computer_choice
     :player_wins
-  when losers[player_choice] == computer_choice
+  when losers[player_choice.to_sym] == computer_choice
     :player_loses
   else
     :draw
