@@ -1,7 +1,6 @@
 
 #beat class which is an odd number of slots after
-CHOICES = [:Scissors, :Paper, :Rock]
-# CHOICES = [:Scissors, :Paper, :Rock, :Lizard, :Spock]
+CHOICES = [:Scissors, :Paper, :Rock, :Lizard, :Spock]
 
 
 class Player 
@@ -33,33 +32,9 @@ class Game
   end
 
   def winner
-    return nil if @players.map(&:choices_index).uniq.count == 1
-    player1 = players.first
-    player2 = players.last
-    choices_rotate_player1 = CHOICES.rotate(player1.choices_index)
-    diff = choices_rotate_player1.index(player2.choice)
-    return player2 if diff % 2 == 0
-    return player1
+    return nil if players.map{|player| player.choice}.uniq.count == 1 # draw
+    #return player an odd number of places in front of the other in the CHOICES array
+    players.max{|p1,p2| CHOICES.rotate(p1.choices_index).index(p2.choice)%2 }
   end
 
-    # return @players.first if (players.first.choices_index - players.last.choices_index)%2 == 1
-    # players.last
-
-
-
 end
-
-
-
-
-# def game_outcome(player1, player2)
-#   case true
-#   when player1.choice == player2.choice
-#     nil #draw
-#   when (CHOICES.index(player1.choice) - CHOICES.index(player2.choice))%2 == 1
-#     player1
-#   else
-#     player2
-#   end
-# end
-#     

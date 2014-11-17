@@ -50,14 +50,41 @@ describe 'Game' do
     expect(game.winner).to eq(alice)
  end
 
-   it 'scissors should beat paper' do
+  it 'scissors should beat paper' do
     game = Game.new
     game.add_player(alice = Player.new('alice'))
     game.add_player(bob = Player.new('bob'))
     alice.choice = :Paper
     bob.choice = :Scissors
     expect(game.winner).to eq(bob)
- end
+  end
+
+  it 'scissors should beat paper' do
+    game = Game.new
+    game.add_player(alice = Player.new('alice'))
+    game.add_player(bob = Player.new('bob'))
+    alice.choice = :Paper
+    bob.choice = :Scissors
+    expect(game.winner).to eq(bob)
+  end
+
+  it 'lizard should beat paper' do
+    game = Game.new
+    game.add_player(alice = Player.new('alice'))
+    game.add_player(bob = Player.new('bob'))
+    alice.choice = :Lizard
+    bob.choice = :Paper
+    expect(game.winner).to eq(alice)
+  end
+
+  it 'lizard should beat Spock' do
+    game = Game.new
+    game.add_player(alice = Player.new('alice'))
+    game.add_player(bob = Player.new('bob'))
+    alice.choice = :Lizard
+    bob.choice = :Spock
+    expect(game.winner).to eq(alice)
+  end
 
 
 end

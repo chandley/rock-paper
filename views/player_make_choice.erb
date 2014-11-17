@@ -1,11 +1,11 @@
 <%require_relative '../lib/game.rb' %>
 
-<h1>Let us play <%=@name%> </h1>
-
+<h1> <%= @player %> is playing <%= @computer %> </h1>
+<h3> Let us play - make a choice </h3>
 
 
 <form action="/play" method="POST">
-  <% choices.each do |choice| %>
+  <% CHOICES.each do |choice| %>
     <button class="btn" name="pick" value=<%= choice %>><%= choice %></button>
   <% end %>
 </form>
