@@ -3,6 +3,7 @@ require_relative 'game'
 
 class RockPaper < Sinatra::Base
   set :views, Proc.new { File.join(root, "../views") }
+  set :public_folder, Proc.new { File.join(root, "../public") }
   enable :sessions
   GAME = Game.new
 
@@ -24,7 +25,8 @@ class RockPaper < Sinatra::Base
     session[:game] = GAME
     session[:player] = @player
     session[:opponent] = @computer
-    erb :player_make_choice
+    @buttons = CHOICES.map {|choice| button_link(choice)}
+    erb :player_make_choice_picture
   end
 
   post '/play' do
@@ -36,6 +38,11 @@ class RockPaper < Sinatra::Base
 
     @winner = GAME.winner.nil? ? 'draw' : GAME.winner.name
     erb :show_result  
+  end
+
+  def button_link(choice)
+    # return "<img id=#{choice} src='/images/#{choicemall.jpg\' alt='#{choice}' width='300' height='200'>"}_s
+    return "<a type='submit' name='pick' value='#{choice.to_sym}'><img src='images/#{choice.to_s.downcase}_small.jpg' width='100' height='75' alt='#{choice}'/></a>"
   end
 
   # start the server if ruby file executed directly
