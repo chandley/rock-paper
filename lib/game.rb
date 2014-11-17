@@ -9,10 +9,11 @@ class Player
   
   def initialize(player_name)
     @name = player_name
+    @choice = :Rock
   end
 
-  def random_choice
-    choice = CHOICES.sample
+  def random_choice!
+    @choice = CHOICES.sample
   end
 
   def choices_index
