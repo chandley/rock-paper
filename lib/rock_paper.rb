@@ -40,9 +40,14 @@ class RockPaper < Sinatra::Base
     erb :show_result  
   end
 
+  get '/play' do
+    'why are we showing get when method is post?'
+  end
+  
+
   def button_link(choice)
     # return "<img id=#{choice} src='/images/#{choicemall.jpg\' alt='#{choice}' width='300' height='200'>"}_s
-    return "<a type='submit' name='pick' value='#{choice.to_sym}'><img src='images/#{choice.to_s.downcase}_small.jpg' width='100' height='75' alt='#{choice}'/></a>"
+    return "<a href ='/play' method='POST' type='submit' name='pick' value='#{choice.to_sym}'><img src='images/#{choice.to_s.downcase}_small.jpg' width='100' height='75' alt='#{choice}'/></a>"
   end
 
   # start the server if ruby file executed directly
