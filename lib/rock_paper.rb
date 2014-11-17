@@ -47,7 +47,8 @@ class RockPaper < Sinatra::Base
 
   def button_link(choice)
     # return "<img id=#{choice} src='/images/#{choicemall.jpg\' alt='#{choice}' width='300' height='200'>"}_s
-    return "<a href ='/play' method='POST' type='submit' name='pick' value='#{choice.to_sym}'><img src='images/#{choice.to_s.downcase}_small.jpg' width='100' height='75' alt='#{choice}'/></a>"
+    # return "<a href ='/play' method='POST' type='submit' name='pick' value='#{choice.to_sym}'> alt='#{choice}'/></a>"
+    return "<input type='image' src='images/#{choice.to_s.downcase}_small.jpg' alt='#{choice}' width='75' height='100' name='pick' value='#{choice.to_sym}'>"
   end
 
   # start the server if ruby file executed directly

@@ -33,7 +33,7 @@ class Game
   end
 
   def winner
-    return nil if players.map{|player| player.choice}.uniq.count == 1 # draw
+    return nil if players.map{|player| player.choice.to_sym}.uniq.count == 1 # draw
     #return player an odd number of places in front of the other in the CHOICES array
     players.max{|p1,p2| CHOICES.rotate(p1.choices_index).index(p2.choice)%2 }
   end
