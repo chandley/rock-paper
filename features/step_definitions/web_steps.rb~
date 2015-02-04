@@ -50,7 +50,7 @@ When(/^I see the play game page$/) do
 end
 
 Then(/^I should see a choice of choose Rock, Paper or Scissors$/) do
-  expect(page.find("#Rock")).not_to be nil
+  expect(page).to have_content("Rock")
 end
 
 When(/^I am playing the game$/) do

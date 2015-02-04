@@ -17,8 +17,11 @@ class RockPaper < Sinatra::Base
       redirect '/'
     end
     
+
+    
     GAME.add_player(@player = Player.new(params[:your_name]))
-    GAME.add_player(@computer = Player.new('computer').random_choice!)
+    GAME.add_player(@computer = Player.new('computer'))
+    @computer.random_choice!
     session[:game] = GAME
     session[:player] = @player
     session[:opponent] = @computer
@@ -27,7 +30,7 @@ class RockPaper < Sinatra::Base
   end
 
   post '/play' do
-    GAME.player1.choice = params[:pick].to_sym
+    session[:player].choice = params[:pick].to_sym
     @player = session[:player]
     @opponent = session[:opponent]
     @winner = GAME.winner.nil? ? 'draw' : GAME.winner

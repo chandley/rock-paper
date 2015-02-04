@@ -1,0 +1,7 @@
+<h1>Game Result</h1>
+
+<h2> <%= @my_name %> chose <%= @my_choice %> </h2>
+
+<h3> <%= @opponent_name %> chose <%= @opponent_choice %> </h3>
+
+<h1> Winner is <%= @winner %> </h1>

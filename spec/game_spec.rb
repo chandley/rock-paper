@@ -1,5 +1,6 @@
-require 'game'
 require 'spec_helper'
+require 'game'
+
 
 describe 'Player' do
 

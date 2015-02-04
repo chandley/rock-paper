@@ -20,7 +20,6 @@ class Player
 
   def random_choice!
     @choice = CHOICES.sample
-    return self
   end
 
   def choices_index
@@ -60,7 +59,12 @@ class Game
 
     def winner
       return nil if player1.choice == player2.choice 
+      puts player1.choice
+      puts player2.choice
+      puts WINNERS[player1.choice.to_sym]
       return player1 if WINNERS[player1.choice].include?(player2.choice)
+      puts player1.choice
+      puts player2.choice
       return player2
     end
 
