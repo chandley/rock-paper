@@ -29,6 +29,10 @@ Features should include
 
 ### Setup
 
+* In command line type Rackup
+* then open browser and type http://localhost:9292/```
+
+
 ### Tests
 
 rspec unit tests
@@ -37,6 +41,8 @@ cucumber acceptance/integration tests
 ### Images
 ![Image of Screen](https://github.com/chandley/rock-paper/blob/master/images/screenshot.jpg)
 ### To do
+
+* Code has long methods and requires refactoring
 
 ### Learning points
 
