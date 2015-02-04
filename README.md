@@ -32,14 +32,19 @@ Features should include
 ### Tests
 
 rspec unit tests
+cucumber acceptance/integration tests
 
 ### Images
-![Image of Screen](https://github.com/chandley/rock-paper/edit/master/images/screenshot.jpg)
+![Image of Screen](https://github.com/chandley/rock-paper/blob/master/images/screenshot.jpg)
 ### To do
 
-add cucumber tests
-
 ### Learning points
+
+* HTML
+* Cucumber
+* Sinatra
+* Addressing page components by css tags
+* Session variables
 
 
 
