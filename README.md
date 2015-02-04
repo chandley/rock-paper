@@ -1,12 +1,45 @@
-Rock, Paper, Scissors game to play on the web with the following features:
+# rock-paper
 
-the marketeer has to enter their name before the game
+[![Test Coverage](https://codeclimate.com/github/chandley/rock-paper/badges/coverage.svg)](https://codeclimate.com/github/chandley/rock-paper)
+[![Code Climate](https://codeclimate.com/github/chandley/rock-paper/badges/gpa.svg)](https://codeclimate.com/github/chandley/rock-paper)
 
-the marketeer will be presented the choices (rock, paper and scissors)
+## Summary
 
-the marketeer can choose one option
+Rock, Paper, Scissors game to play on the web 
 
-the game will choose a random option
+### Problem
 
-a winner will be declared
+Features should include
+* the marketeer has to enter their name before the game
+* the marketeer will be presented the choices (rock, paper and scissors)
+* the marketeer can choose one option
+* the game will choose a random option
+* a winner will be declared
+
+### Languages/Platforms/Tools
+
+| Languages | Technologies  | Testing Frameworks| Misc
+| :-------------------------------------------- |:--------------|:-----------|:----|
+| Ruby      |  Sinatra             | Rspec             |               |
+|           |               |                   |               |
+|           |               |                   |  
+|           |               |
+
+### Solution
+
+### Setup
+
+### Tests
+
+rspec unit tests
+
+### Images
+
+### To do
+
+add cucumber tests
+
+### Learning points
+
+
 
