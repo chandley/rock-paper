@@ -1,4 +1,5 @@
 require 'game'
+require 'spec_helper'
 
 describe 'Player' do
 
@@ -47,7 +48,7 @@ describe 'Game' do
     game.add_player(bob = Player.new('bob'))
     alice.choice = :Rock
     bob.choice = :Scissors
-    expect(game.winner).to eq(alice)
+    expect(game.winner).to be(alice)
  end
 
   it 'scissors should beat paper' do
