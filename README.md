@@ -34,7 +34,7 @@ Features should include
 rspec unit tests
 
 ### Images
-
+![Image of Screen](https://github.com/chandley/rock-paper/edit/master/images/screenshot.jpg)
 ### To do
 
 add cucumber tests
