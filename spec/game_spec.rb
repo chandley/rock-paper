@@ -16,6 +16,11 @@ describe 'Player' do
     expect(player.choice).to eq(:Rock)
   end
 
+  it 'can make a random choice' do
+    player.random_choice!
+    expect(CHOICES).to include(player.choice)
+  end
+
 end
 
 describe 'Game' do
