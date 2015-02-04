@@ -6,7 +6,7 @@
 
 <form action="/play" method="POST">
   <% CHOICES.each do |choice| %>
-    <input id="<%=choice%>" type='image' src="images/<%=choice.to_s.downcase%>_small.jpg" alt="<%=choice%>" width="75" height="100" name="pick" value="<%=choice%>">" 
+    <input id="<%=choice%>" type='image' src="images/<%=choice.to_s.downcase%>_small.jpg" alt="<%=choice%>" width="75" height="100" name="pick" value="<%=choice%>">
   <% end %>
 
   <input type="submit" value="Submit">
